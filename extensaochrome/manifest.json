@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "PTang",
+  "version": "2.1",
+  "description": "Importar para .xlsx informações dos pontos registrados.",
+  "icons": {
+    "128": "icone.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "*://*/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "*://*/*",
+        "*://*.tangerino.com.br/*"
+      ],
+      "js": [
+        "jquery-1.9.1.min.js",
+        "xlsx.core.min.js",
+        "Blob.min.js",
+        "FileSaver.min.js",
+        "tableexport.min.js",
+        "background.js"
+      ]
+    }
+  ]
+}
