@@ -2,14 +2,13 @@
 
 require 'conexao.php';
 
-$id = $_POST['codigo'];
+$iId = $_POST['codigo'];
 
 $sSql = "
-  DELETE
-    FROM COLABORADOR
-   WHERE
-    ID = '".$id. "'";
+        DELETE
+          FROM COLABORADOR
+         WHERE
+          ID = '" . $iId . "'";
 
-$sResult = $conn->query($sSql);
-
+$sResult = $sConn->query($sSql);
 ?>

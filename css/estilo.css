@@ -20,7 +20,24 @@
   background-color: #ffffff;
 }
 
-.bkHora{
+#table-chamados{
+  width:80%;
+  display: block;
+  margin: 0 auto;
+}
 
-background-color: #ff9478;
+#btn-voltar{
+  display: table;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#tr-total-horas{
+  background-color: #c8f7c5;
+}
+
+#iframe-table{
+  width: 100%;
+  border:0;
+  height:80%;
 }

@@ -7,6 +7,7 @@ require 'menu.php';
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>TangDesk - PONTOS</title>
     <link rel="stylesheet" href="css/estilo.css">
   </head>
@@ -58,20 +59,20 @@ require 'menu.php';
 
     <fieldset id="fieldset-colaborador">
       <legend id="legenda-colaborador">Selecione o colaborador para buscar as informações sobre os pontos</legend>
-      <form method="post" action="pontos_tangerino.php" name="frmColaborador">
+      <form method="post" action="pontos_tangerino.php" name="frmColaborador" target="colaborador">
         <div>
           <?php
-          $sSql              = "
-          SELECT
-            *
-           FROM
-              colaborador
-           WHERE 1 = 1 %s
+          $sSql = "
+                  SELECT
+                      *
+                    FROM
+                      COLABORADOR
+                     WHERE 1 = 1 %s
           ";
-          $sSelecionado      = sprintf($sSql
+          $sSelecionado  = sprintf($sSql
             , (isset($_POST['func_nome']) && $_POST['func_nome']) ? 'AND NOME LIKE \'%' . addslashes($_POST['func_nome']) . '%\'' : ''
           );
-          $sResultado        = mysqli_query($conn, $sSelecionado);
+          $sResultado = mysqli_query($sConn, $sSelecionado);
           ?>
           Colaborador: <select id="func_id" name="func_id">
             <option >Selecione...</option>
@@ -86,6 +87,8 @@ require 'menu.php';
         </div>
       </form>
     </fieldset>
+    <iframe name="colaborador"  id="iframe-table">
+    </iframe>
   </body>
 </html>
 

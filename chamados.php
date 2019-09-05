@@ -1,11 +1,11 @@
 <?php
-require 'fontes.php';
-require 'menu.php';
 require 'querys.php';
+require './estilos.php';
 ?>
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>TangDesk - Chamados</title>
     <link rel="stylesheet" href="css/estilo.css">
   </head>
@@ -13,41 +13,45 @@ require 'querys.php';
     <br>
     <?php
     $sData              = $_GET['data'];
+    $sColaborador       = $_GET['colaborador'];
     $sConsulta          = "
-        SELECT
-            TICKET,
-            DESCRICAO,
-            DATA_PONTO,
-            HORA_INICIO,
-            HORA_FIM,
-            HORA_APONTADA,
-            HORA_TRABALHADA,
-            ID_COLABORADOR,
-          CONVERT((TIMEDIFF(HORA_APONTADA,HORA_TRABALHADA)), TIME) AS DIFERENCA
-         FROM MOVIDESK
-          WHERE DATA_PONTO = '%s'";
+                      SELECT
+                            TICKET,
+                            DESCRICAO,
+                            DATA_PONTO,
+                            HORA_INICIO,
+                            HORA_FIM,
+                            HORA_APONTADA,
+                            HORA_TRABALHADA,
+                            ID_COLABORADOR,
+                            CONVERT((TIMEDIFF(HORA_APONTADA,HORA_TRABALHADA)), TIME) AS DIFERENCA
+                        FROM MOVIDESK
+                          WHERE DATA_PONTO = '%s'
+                          AND ID_COLABORADOR = %s
+                      ";
     $sQueryConsulta     = sprintf($sConsulta
       , $sData
+      , $sColaborador
     );
-    $sResultadoConsulta = mysqli_query($conn, $sQueryConsulta);
+    $sResultadoConsulta = mysqli_query($sConn, $sQueryConsulta);
     ?>
-    <div style="width:70%; margin-left: 15%;">
+    <div id="table-chamados">
       <table class="table table-hover">
         <thead>
           <tr>
-            <th width="10%">Nº Chamado</th>
-            <th width="35%">Descrição</th>
-            <th width="8%">Data</th>
-            <th width="8%">Hora Início</th>
-            <th width="10%">Hora Fim</th>
-            <th width="10%">Hora Apontada</th>
-            <th width="10%">Hora Trabalhada</th>
-            <th width="10%">Diferença</th>
+            <th width="10%">Nº CHAMADO</th>
+            <th width="30%">DESCRIÇÃO</th>
+            <th width="8%">DATA</th>
+            <th width="8%">HORA INÍCIO</th>
+            <th width="8%">HORA FIM</th>
+            <th width="10%">HORA APONTADA</th>
+            <th width="15%">HORA TRABALHADA</th>
+            <th width="8%">DIFERENÇA</th>
           </tr>
         </thead>
         <tbody>
           <?php
-          while ($count              = mysqli_fetch_array($sResultadoConsulta)) {
+          while ($count = mysqli_fetch_array($sResultadoConsulta)) {
             ?>
             <tr>
               <td><?php echo $count['TICKET']; ?></td>
@@ -68,38 +72,39 @@ require 'querys.php';
               <?php } ?>
             <?php } ?>
           </tr>
-          <tr>
+          <tr id="tr-total-horas">
             <th style="background-color: #c8f7c5;">Total Horas/Dia</th>
             <th style="background-color: #c8f7c5;">
               <?php
               $sDiferencaHora = "
-                SELECT
-                    SEC_TO_TIME(SUM(TIME_TO_SEC(HORA_TRABALHADA))) AS TOTAL_HORAS
-                 FROM MOVIDESK
-                 WHERE DATA_PONTO = '%s'";
+                        SELECT
+                              SEC_TO_TIME(SUM(TIME_TO_SEC(HORA_TRABALHADA))) AS TOTAL_HORAS
+                          FROM MOVIDESK
+                            WHERE DATA_PONTO = '%s'
+                            AND ID_COLABORADOR = %s";
 
               $sTotalHoras = sprintf($sDiferencaHora
                 , $sData
+                , $sColaborador
               );
 
-              $sListHoraDiferenca = mysqli_query($conn, $sTotalHoras);
+              $sListHoraDiferenca = mysqli_query($sConn, $sTotalHoras);
 
               while ($aHoraDifererenca = mysqli_fetch_array($sListHoraDiferenca)) {
                 echo $aHoraDifererenca['TOTAL_HORAS'];
               }
               ?>
             </th>
-            <th style="background-color: #c8f7c5;"></th>
-            <th style="background-color: #c8f7c5;"></th>
-            <th style="background-color: #c8f7c5;"></th>
-            <th style="background-color: #c8f7c5;"></th>
-            <th style="background-color: #c8f7c5;"></th>
-            <th style="background-color: #c8f7c5;"></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </tbody>
       </table>
     </div>
-    <a href="javascript:history.back()" class="btn btn-primary" style="margin-left: 82%;  ">Voltar</a>
+    <a href="javascript:history.back()" class="btn btn-primary" id="btn-voltar" align="left">Voltar</a>
   </body>
 </html>
-

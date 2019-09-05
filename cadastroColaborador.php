@@ -1,77 +1,60 @@
 <?php
-session_start();
-require 'conexao.php';
-
-$iOffset = empty($_GET['pagina']) ? 0 : ($_GET['pagina'] * 10) - 10;
-$sQuery  = "SELECT * FROM COLABORADOR WHERE 1 = 1 %s ORDER BY ID ASC LIMIT 15 OFFSET $iOffset";
-
-$sQuery  = sprintf($sQuery
-  , (isset($_POST['NOME']) && $_POST['NOME']) ? ' AND NOME LIKE \'%' . addslashes($_POST['NOME']) . '%\'' : ''
-);
-$aResult = mysqli_query($conn, $sQuery);
-$aKeys   = array_keys($_GET);
-if (in_array('pagina', $aKeys)) {
-  $iPagina = $_GET['pagina'];
-} else {
-  $iPagina = 1;
-}
+require './querys.php';
+require 'menu.php';
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cadastro Colaborador</title>
     <meta charset="UTF-8">
+    <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Colaborador</title>
+    <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body>
-    <?php require 'menu.php'; ?>
     <br>
-    <div class="container" style="width:400px;">
+    <!--BOTÃO PARA ADICIONAR NOVO COLABORADOR -->
+    <div class="container">
       <div align="right">
         <button align="left" type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-lg btn-success"><i class="fas fa-user-plus"></i></button>
       </div>
       <br>
+      <!-- TABELA COM A LISTA DOS COLABORADORES -->
       <div id="employee_table">
         <table class="table table-striped table-hover">
-          <tr>
-            <th width="5%">ID</th>
-            <th width="50%">Nome</th>
-            <th width="30%" ></th>
-          </tr>
-          <?php
-          while ($aRow = mysqli_fetch_array($aResult)) {
-            ?>
-            <tr >
-              <td><?php echo $aRow['ID']; ?></td>
-              <td><?php echo $aRow['NOME']; ?></td>
-              <td align="right">
-                <button type="button" name="delete" value="delete" codigo="<?php echo $aRow['ID']; ?>" class="excluirReg btn btn-danger"><i class="fas fa-trash"></i></button>
-              </td>
+          <thead>
+            <tr>
+              <th width="5%">ID</th>
+              <th width="50%">Nome</th>
+              <th width="30%" ></th>
             </tr>
+          </thead>
+          <tbody>
             <?php
-          }
-          ?>
+            while ($aRow = mysqli_fetch_array($sListColaborador)) {
+              ?>
+              <tr>
+                <td><?php echo $aRow['ID']; ?></td>
+                <td><?php echo $aRow['NOME']; ?></td>
+                <td align="right">
+                  <button type="button" name="delete" value="delete" codigo="<?php echo $aRow['ID']; ?>" class="excluirReg btn btn-danger"><i class="fas fa-trash"></i></button>
+                </td>
+              </tr>
+              <?php
+            }
+            ?>
+          </tbody>
         </table>
       </div>
     </div>
-
-    <!--Paginação -->
-    <div align="center">
-      <a href="cadastroColaborador.php" class="btn btn-default <?= ($iPagina == 1) ? 'btn-lg btn-primary' : '' ?>"> 1</a>
-      <!--<a href="cadastroColaborador.php?pagina=2" class="btn btn-default  <?= ($iPagina == 2) ? 'btn-lg btn-primary' : '' ?>"> 2 </a>
-      <a href="cadastroColaborador.php?pagina=3" class="btn btn-default <?= ($iPagina == 3) ? 'btn-lg btn-primary' : '' ?>"> 3 </a>
-   -->
-    </div>
-
     <!--Modal Adicionar -->
     <div id="add_data_Modal" class="modal">
       <div class="modal-dialog">
         <div class="modal-content">
-          <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Adicionar novo colaborador</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          <!-- Modal body -->
           <div class="modal-body">
             <div class="container">
               <form name="form1" id="form1" class="form-horizontal">
@@ -80,7 +63,7 @@ if (in_array('pagina', $aKeys)) {
                   <input type="text" name="nome-add" id="nome-add" class="form-control" placeholder="Ex.: Fulano de Tal" />
                 </div>
                 <div class="form-group">
-                  <div align="right" style="margin-right: 15px">
+                  <div align="right">
                     <input type="button" id="enviar" value="Adicionar" class="btn btn-primary" />
                   </div>
                   <div id="resultado"></div>
@@ -92,8 +75,7 @@ if (in_array('pagina', $aKeys)) {
       </div>
     </div>
     <!--Modal Excluir -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog" role="document"></div>
+    <div class="modal fade" id="myModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -116,9 +98,8 @@ if (in_array('pagina', $aKeys)) {
       $(document).ready(function () {
         $('#enviar').click(function () {
           if ($('#nome-add').val() === '') {
-            alert('Ops! Esqueceu de preencher o nome do Colaborador... ');
-          } else
-          {
+            alert('Ops! Esqueceu de preencher o nome do Colaborador...');
+          } else {
             $.ajax({
               url: 'inserir_func.php',
               type: 'POST',
@@ -155,6 +136,16 @@ if (in_array('pagina', $aKeys)) {
             }
           });
         }
+      });
+      /*Script para plugin de tabela */
+      $(function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js';
+        document.head.appendChild(script);
+        setTimeout(function () {
+          $('table').DataTable();
+        }, 10);
       });
     </script>
   </body>

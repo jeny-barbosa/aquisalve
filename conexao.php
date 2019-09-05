@@ -1,9 +1,9 @@
 <?php
 
-$host    = 'localhost';
-$banco   = 'sistema_pontos';
-$usuario = 'root';
-$senha   = '';
-$conn    = mysqli_connect($host, $usuario, $senha, $banco);
+$sHost    = 'localhost';
+$sBanco   = 'sistema_pontos';
+$sUsuario = 'root';
+$sSenha   = '';
+$sConn    = mysqli_connect($sHost, $sUsuario, $sSenha, $sBanco);
 ?>
 

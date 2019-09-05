@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+	<?mso-application progid="Excel.Sheet"?> 
+	<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" 
+	xmlns:x="urn:schemas-microsoft-com:office:excel" 
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:html="http://www.w3.org/TR/REC-html40"> 
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"> 
+	<Version>12.00</Version> 
+	</DocumentProperties> 
+	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"> 
+	<WindowHeight>8130</WindowHeight> 
+	<WindowWidth>15135</WindowWidth> 
+	<WindowTopX>120</WindowTopX> 
+	<WindowTopY>45</WindowTopY> 
+	<ProtectStructure>False</ProtectStructure> 
+	<ProtectWindows>False</ProtectWindows> 
+	</ExcelWorkbook> 
+	<Styles>
+		<Style ss:ID="xls-style-1" ss:Name="xls-style-1">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#E8E8E8" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-2" ss:Name="xls-style-2">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-3" ss:Name="xls-style-3">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+			<NumberFormat ss:Format="0"/>
+		</Style>
+		<Style ss:ID="xls-style-4" ss:Name="xls-style-4">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-5" ss:Name="xls-style-5">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+			<NumberFormat ss:Format="Short Date"/>
+		</Style>
+		<Style ss:ID="xls-style-6" ss:Name="xls-style-6">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+			<NumberFormat ss:Format="#,##0.00_);[Red](#,##0.00)"/>
+		</Style>
+	<Style ss:ID="time-style" ss:Name="time-style"><Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/><Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/><Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/><Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#AAAAAA"/></Borders><Font ss:Color="#000000" /><Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/><NumberFormat ss:Format="h:mm;@"/></Style>
+</Styles>
+	<Worksheet ss:Name="Sheet1">
+		<Table>
+			<Column ss:Width="180"/>
+			<Column ss:Width="90"/>
+			<Column ss:Width="162"/>
+			<Column ss:Width="54"/>
+			<Column ss:Width="72"/>
+			<Column ss:Width="36"/>
+			<Column ss:Width="180"/>
+			<Column ss:Width="180"/>
+			<Column ss:Width="90"/>
+			<Column ss:Width="54"/>
+			<Column ss:Width="25"/>
+			<Column ss:Width="108"/>
+			<Column ss:Width="108"/>
+			<Column ss:Width="108"/>
+			<Column ss:Width="90"/>
+			<Column ss:Width="90"/>
+			<Column ss:Width="144"/>
+			<Column ss:Width="144"/>
+			<Column ss:Width="90"/>
+			<Column ss:Width="108"/>
+			<Column ss:Width="108"/>
+			<Column ss:Width="72"/>
+			<Row>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Cliente</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Classificação</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Solicitante</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Ticket pai</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Ticket</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Tipo</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Assunto</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Serviço</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Categoria</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Ação</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Descrição</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Agente</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Equipe</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Data</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Início</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Fim</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Horas Apontadas</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Horas Trabalhadas</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Tipo</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Atividade</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Status</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">RS</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"> AREA CENTRAL SISTEMAS E CONSULTORIA S.A.</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erick Fernandes de Souza</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">24644</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Interno</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Total de compras por categoria</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Compras » Análise de Compra</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erro (Inconformidades no sistema)</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Corrigido valores do total de compras por categoria para estar igual ao relatório de total de compras nfe.
+</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erick Fernandes de Souza</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Desenvolvimento</Data></Cell>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">01/07/2019</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T08:15</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T09:00</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T00:45</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T00:45</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Normal</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Análise</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Fechado</Data></Cell>
+				<Cell ss:StyleID="xls-style-6"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CONSTRUECIACASCAVEL</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Valmiro</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">24811</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">24813</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Interno</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Marcadores inativos na análise de compra </Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Compras » Análise de Compra</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erro (Inconformidades no sistema)</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">
+O que foi realizado:
+ Alterado sql de busca para não trazer marcadores excluídos.
+ 
+**Se fez necessário o uso da feature neste caso pois a analise do associado ainda não está na branch Master (que é de onde o hotfix parte).
+ 
+Arquivos Alterados:
+ sistema/administrador/analisecompra/AnaliseComprasModel.php
+ sistema/associado/analisecompra/AnaliseComprasModel.php
+ 
+</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erick Fernandes de Souza</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Desenvolvimento</Data></Cell>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">01/07/2019</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T09:12</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T10:10</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T00:58</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T00:58</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Normal</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Desenvolvimento</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Fechado</Data></Cell>
+				<Cell ss:StyleID="xls-style-6"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"> AREA CENTRAL SISTEMAS E CONSULTORIA S.A.</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Everton Jusan Serafim</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">24777</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Interno</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Integração Área Central x Ciss</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Estrutura » Integração</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erro (Inconformidades no sistema)</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">integracao/sistema_ciss/administrador/pedido/produtos_nao_integrados.php
+[NC][102] - Remover vardump
+ 
+integracao/sistema_ciss/administrador/pedido/produtos_nao_integrados.php
+[SM] - Corrigir layout da identificação:
+- Linha 17 - Adicionar no H2 - style=&quot;max-width:100%&quot;
+- Linha 19 - Adicionar -&gt; style=&quot;margin-bottom:0px&quot;
+- Linha 39 - Remover classes flex-center flex-justify.
+- Abaixo da linha 234 ($(&apos;#done&apos;).removeClass(&apos;hidden&apos;)) o seguinte codigo: $(&apos;#done&apos;).addClass(&apos;flex-center flex-justify&apos;);
+ 
+O layout ficará assim:
+</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erick Fernandes de Souza</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Desenvolvimento</Data></Cell>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">01/07/2019</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T10:20</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T11:40</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T01:20</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T01:20</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Normal</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Revisão</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Fechado</Data></Cell>
+				<Cell ss:StyleID="xls-style-6"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"> AREA CENTRAL SISTEMAS E CONSULTORIA S.A.</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Everton Jusan Serafim</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">24557</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Interno</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Serviço Relacionado a infraestrutura</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Estrutura » Infraestrutura Interna</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Serviço Interno (Dedicado a serviços relacionados a Área Central)</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Criação de ftp: coopefarma
+</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erick Fernandes de Souza</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Desenvolvimento</Data></Cell>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">01/07/2019</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T11:20</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T11:32</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T00:12</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Normal</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Análise</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Em Espera</Data></Cell>
+				<Cell ss:StyleID="xls-style-6"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"> AREA CENTRAL SISTEMAS E CONSULTORIA S.A.</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Everton Jusan Serafim</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">24777</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Interno</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Integração Área Central x Ciss</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Estrutura » Integração</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erro (Inconformidades no sistema)</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="Number">3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">integracao/sistema_ciss/administrador/pedido/produtos_nao_integrados.php
+[NC][102] - Remover vardump
+ 
+integracao/sistema_ciss/administrador/pedido/produtos_nao_integrados.php
+[SM] - Corrigir layout da identificação:
+- Linha 17 - Adicionar no H2 - style=&quot;max-width:100%&quot;
+- Linha 19 - Adicionar -&gt; style=&quot;margin-bottom:0px&quot;
+- Linha 39 - Remover classes flex-center flex-justify.
+- Abaixo da linha 234 ($(&apos;#done&apos;).removeClass(&apos;hidden&apos;)) o seguinte codigo: $(&apos;#done&apos;).addClass(&apos;flex-center flex-justify&apos;);
+ 
+O layout ficará assim:
+</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Erick Fernandes de Souza</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Desenvolvimento</Data></Cell>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">01/07/2019</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T13:30</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T14:50</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T01:20</Data></Cell>
+				<Cell ss:StyleID="time-style"><Data ss:Type="DateTime">1899-12-31T01:20</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Normal</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Revisão</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Fechado</Data></Cell>
+				<Cell ss:StyleID="xls-style-6"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">: 04:35</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">: 04:23</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-6"><Data ss:Type="String"></Data></Cell>
+			</Row>
+		</Table>
+	</Worksheet>
+</Workbook>
